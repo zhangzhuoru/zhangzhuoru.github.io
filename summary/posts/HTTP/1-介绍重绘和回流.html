@@ -1,0 +1,410 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      ol,
+      ul,
+      li,
+      img {
+          margin: 0;
+          padding: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline;
+      }
+      
+      html * {
+          font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+          font-size: 16px;
+          line-height: 19.2px;
+          color-profile: sRGB;
+      }
+      
+      body {
+          min-width: 32em;
+          max-width: 56em;
+          margin: 10px auto;
+      }
+      
+      p, blockquote p {
+          line-height: 1.6;
+      }
+      
+      ul, ol {
+          margin: 16px 0;
+      }
+      
+      ul li, ol li {
+          line-height: 1.6;
+      }
+      
+      p {
+          font-weight: lighter;
+          margin: 10px 0;
+      }
+      
+      strong {
+          font-weight: bold;
+      }
+      
+      ol,
+      ul {
+          margin-left: 2em;
+      }
+      
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          font-weight: lighter;
+          text-transform: capitalize;
+          margin: 20px 0;
+          border-bottom: 1px solid;
+          padding-bottom: 6px;
+      }
+      
+      h1, h1 > code {
+          font-size: 24.624px;
+          line-height: 29.548799999999996px;
+      }
+      
+      h2, h2 > code {
+          font-size: 24.624px;
+          line-height: 29.548799999999996px;
+      }
+      
+      h3, h3 > code {
+          font-size: 23.44px;
+          line-height: 28.128px;
+      }
+      
+      h4, h4 > code {
+          font-size: 22.16px;
+          line-height: 26.592px;
+      }
+      
+      h5, h5 > code {
+          font-size: 22.16px;
+          line-height: 26.592px;
+      }
+      
+      h6, h6 > code {
+          font-size: 22.16px;
+          line-height: 26.592px;
+      }
+      
+      img {
+          margin-bottom: 20px;
+      }
+      
+      h1 img,
+      h2 img,
+      h3 img,
+      h4 img,
+      h5 img,
+      h6 img,
+      p img {
+          margin-bottom: 0;
+      }
+      
+      pre,
+      code {
+          font-family: monospace, Consolas, "Source Code Pro", Arial, sans-serif;
+          color: #586e75;
+          background-color: #eee8d5;
+      }
+      
+      pre {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          padding: 12px;
+          margin-bottom: 20px;
+      }
+      
+      code {
+          border-radius: 3px;
+      }
+      
+      h1 {
+          text-transform: uppercase;
+          font-weight: bold;
+      }
+      
+      h3,
+      h4,
+      h5,
+      h6 {
+          border-bottom: none;
+      }
+      
+      html * {
+          color: #657b83;
+      }
+      
+      html body {
+          background-color: #fdf6e3;
+      }
+      
+      html h1,
+      html h2,
+      html h3,
+      html h4,
+      html h5,
+      html h6 {
+          color: #586e75;
+          border-color: #657b83;
+      }
+      
+      html a,
+      html a:active,
+      html a:visited {
+          color: #586e75;
+          text-decoration: none;
+          border-bottom: 1px dashed;
+          border-radius: 2px;
+      }
+      
+      html a:hover {
+          background-color: #eee8d5;
+      }
+      
+      blockquote a:hover {
+          background-color: #fdf6e3;
+      }
+      
+      html a,
+      html a:active,
+      html a:visited,
+      html code.url {
+          color: #b58900;
+      }
+      
+      html h1 {
+          color: #b58900;
+      }
+      
+      html h2,
+      html h3,
+      html h4,
+      html h5,
+      html h6 {
+          color: #b58900;
+      }
+      
+      /* QUOTES
+      =============================================================================*/
+      blockquote {
+          border-left: 4px solid #b58900;
+          padding: 12px;
+          background: #eee8d5;
+          border-bottom-right-radius: 2px;
+      }
+      
+      blockquote code {
+          background: #fdf6e3;
+      }
+      
+      blockquote > :first-child {
+          margin-top: 0;
+      }
+      
+      blockquote > :last-child {
+          margin-bottom: 0;
+      }
+      
+      /* TABLES
+      =============================================================================*/
+      table {
+          margin: 0 auto;
+          border-collapse: collapse;
+          width: 100%;
+          box-sizing: border-box;
+          margin-bottom: 30px;
+      }
+      
+      table th, table td {
+          border: 1px solid #ccc;
+          padding: 6px 13px;
+      }
+      
+      table td {
+          word-break: break-word;
+          line-height: 1.3;
+      }
+      
+      table th {
+          font-weight: bold;
+          text-align: center !important;
+          background-color: #eee8d5;
+      }
+      
+      table tr {
+          border-top: 1px solid #ccc;
+          background-color: #fdf6e3;
+      }
+      
+      /* IMAGES
+      =============================================================================*/
+      img {
+          max-width: 100%;
+      }
+      
+      p > img {
+          display: table;
+          margin: 0 auto;
+      }
+      
+      p code, li code, td code {
+          padding: 1px 3px;
+          border-radius: 3px;
+      }
+      
+      .cp_embed_wrapper {
+          margin: 20px 0;
+      }
+      
+      @media screen and (min-width: 980px) and (max-width: 980px) {	
+          table thead tr th,
+          table thead tr th > code,
+          table tbody tr td,
+          table tbody tr td > code,
+          table tbody tr td > strong {
+              font-size: 1.3em;
+              line-height: 1.3;
+          }
+      
+          p, p code,
+          p strong, p strong > code,
+          blockquote p {
+              font-size: 1.3em;
+              line-height: 1.6;
+          }
+      
+          pre > code,
+          ul li pre > code,
+          ol li pre > code{
+              font-size: 1.3em;
+              line-height: 1.3;    	
+          }	
+          
+      
+          ul li, ol li,
+          ul li > code,
+          ol li > code {
+              font-size: 1.3em;
+              line-height: 1.3;          
+          }
+      
+          ul {
+              margin-left: 3.4em;
+          }
+      
+          ol {
+              margin-left: 3.6em;
+          }
+      }
+      </style>
+<title>1-介绍重绘和回流</title></head>
+<body><h4>1. 浏览器渲染机制</h4>
+<ul>
+<li>浏览器采用流式布局模型（<code>Flow Based Layout</code>）</li>
+<li>浏览器会把<code>HTML</code>解析成<code>DOM</code>，把<code>CSS</code>解析成<code>CSSOM</code>，<code>DOM</code>和<code>CSSOM</code>合并就产生了渲染树（<code>Render Tree</code>）。</li>
+<li>有了<code>RenderTree</code>，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到页面上。</li>
+<li>由于浏览器使用流式布局，对<code>Render Tree</code>的计算通常只需要遍历一次就可以完成，<strong>但<code>table</code>及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，这也是为什么要避免使用<code>table</code>布局的原因之一</strong>。</li>
+
+</ul>
+<h4>2. 重绘</h4>
+<p>由于节点的几何属性发生改变或者由于样式发生改变而不会影响布局的，称为重绘，例如<code>outline</code>, <code>visibility</code>, <code>color</code>、<code>background-color</code>等，重绘的代价，因为浏览器必须验证DOM树上其他节点元素的可见性。</p>
+<h4>3. 回流</h4>
+<p>回流是布局或者几何属性需要改变就称为回流。回流是影响浏览器性能的关键因素，因为其变化涉及到部分页面（或是整个页面）的布局更新。一个元素的回流可能会导致了其所有子元素以及DOM中紧随其后的节点、祖先节点元素的随后的回流。</p>
+<pre><code class='language-javascript' lang='javascript'>&lt;body&gt;
+&lt;div class=&quot;error&quot;&gt;
+    &lt;h4&gt;我的组件&lt;/h4&gt;
+    &lt;p&gt;&lt;strong&gt;错误：&lt;/strong&gt;错误的描述…&lt;/p&gt;
+    &lt;h5&gt;错误纠正&lt;/h5&gt;
+    &lt;ol&gt;
+        &lt;li&gt;第一步&lt;/li&gt;
+        &lt;li&gt;第二步&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p>在上面的HTML片段中，对该段落(<code>标签)回流将会引发强烈的回流，因为它是一个子节点。这也导致了祖先的回流（`div.error`和`body` – 视浏览器而定）。此外，</code>和``也会有简单的回流，因为其在DOM中在回流元素之后。<strong>大部分的回流将导致页面的重新渲染。</strong></p>
+<p><strong>回流必定会发生重绘，重绘不一定会引发回流。</strong></p>
+<h4>4. 浏览器优化</h4>
+<p>现代浏览器大多都是通过队列机制来批量更新布局，浏览器会把修改操作放在队列中，至少一个浏览器刷新（即16.6ms）才会清空队列，但当你<strong>获取布局信息的时候，队列中可能有会影响这些属性或方法返回值的操作，即使没有，浏览器也会强制清空队列，触发回流与重绘来确保返回正确的值</strong>。</p>
+<p>主要包括以下属性或方法：</p>
+<ul>
+<li><code>offsetTop</code>、<code>offsetLeft</code>、<code>offsetWidth</code>、<code>offsetHeight</code></li>
+<li><code>scrollTop</code>、<code>scrollLeft</code>、<code>scrollWidth</code>、<code>scrollHeight</code></li>
+<li><code>clientTop</code>、<code>clientLeft</code>、<code>clientWidth</code>、<code>clientHeight</code></li>
+<li><code>width</code>、<code>height</code></li>
+<li><code>getComputedStyle()</code></li>
+<li><code>getBoundingClientRect()</code></li>
+
+</ul>
+<p>所以，我们应该避免频繁的使用上述的属性，他们都会强制渲染刷新队列。</p>
+<h4>5. 减少重绘与回流</h4>
+<ol start='' >
+<li><p>CSS</p>
+<ul>
+<li><p><strong>使用 <code>transform</code> 替代 <code>top</code></strong></p>
+</li>
+<li><p><strong>使用 <code>visibility</code> 替换 <code>display: none</code></strong> ，因为前者只会引起重绘，后者会引发回流（改变了布局</p>
+</li>
+<li><p><strong>避免使用<code>table</code>布局</strong>，可能很小的一个小改动会造成整个 <code>table</code> 的重新布局。</p>
+</li>
+<li><p><strong>尽可能在<code>DOM</code>树的最末端改变<code>class</code></strong>，回流是不可避免的，但可以减少其影响。尽可能在DOM树的最末端改变class，可以限制了回流的范围，使其影响尽可能少的节点。</p>
+</li>
+<li><p><strong>避免设置多层内联样式</strong>，CSS 选择符<strong>从右往左</strong>匹配查找，避免节点层级过多。</p>
+<pre><code class='language-javascript' lang='javascript'>&lt;div&gt;
+  &lt;a&gt; &lt;span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;/div&gt;
+&lt;style&gt;
+  span {
+    color: red;
+  }
+  div &gt; a &gt; span {
+    color: red;
+  }
+&lt;/style&gt;
+</code></pre>
+<p>对于第一种设置样式的方式来说，浏览器只需要找到页面中所有的 <code>span</code> 标签然后设置颜色，但是对于第二种设置样式的方式来说，浏览器首先需要找到所有的 <code>span</code> 标签，然后找到 <code>span</code> 标签上的 <code>a</code> 标签，最后再去找到 <code>div</code> 标签，然后给符合这种条件的 <code>span</code> 标签设置颜色，这样的递归过程就很复杂。所以我们应该尽可能的避免写<strong>过于具体</strong>的 CSS 选择器，然后对于 HTML 来说也尽量少的添加无意义标签，保证<strong>层级扁平</strong>。</p>
+</li>
+<li><p><strong>将动画效果应用到<code>position</code>属性为<code>absolute</code>或<code>fixed</code>的元素上</strong>，避免影响其他元素的布局，这样只是一个重绘，而不是回流，同时，控制动画速度可以选择 <code>requestAnimationFrame</code>，详见<a href='https://github.com/LuNaHaiJiao/blog/issues/30'>探讨 requestAnimationFrame</a>。</p>
+</li>
+<li><p><strong>避免使用<code>CSS</code>表达式</strong>，可能会引发回流。</p>
+</li>
+<li><p><strong>将频繁重绘或者回流的节点设置为图层</strong>，图层能够阻止该节点的渲染行为影响别的节点，例如<code>will-change</code>、<code>video</code>、<code>iframe</code>等标签，浏览器会自动将该节点变为图层。</p>
+</li>
+<li><p><strong>CSS3 硬件加速（GPU加速）</strong>，使用css3硬件加速，可以让<code>transform</code>、<code>opacity</code>、<code>filters</code>这些动画不会引起回流重绘 。但是对于动画的其它属性，比如<code>background-color</code>这些，还是会引起回流重绘的，不过它还是可以提升这些动画的性能。</p>
+</li>
+
+</ul>
+</li>
+<li><p>JavaScript</p>
+<ul>
+<li><strong>避免频繁操作样式</strong>，最好一次性重写<code>style</code>属性，或者将样式列表定义为<code>class</code>并一次性更改<code>class</code>属性。</li>
+<li><strong>避免频繁操作<code>DOM</code></strong>，创建一个<code>documentFragment</code>，在它上面应用所有<code>DOM操作</code>，最后再把它添加到文档中。</li>
+<li><strong>避免频繁读取会引发回流/重绘的属性</strong>，如果确实需要多次使用，就用一个变量缓存起来。</li>
+<li><strong>对具有复杂动画的元素使用绝对定位</strong>，使它脱离文档流，否则会引起父元素及后续元素频繁回流。</li>
+
+</ul>
+</li>
+
+</ol>
+</body>
+</html>

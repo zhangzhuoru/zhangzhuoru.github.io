@@ -1,0 +1,775 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      ol,
+      ul,
+      li,
+      img {
+          margin: 0;
+          padding: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline;
+      }
+      
+      html * {
+          font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+          font-size: 16px;
+          line-height: 19.2px;
+          color-profile: sRGB;
+      }
+      
+      body {
+          min-width: 32em;
+          max-width: 56em;
+          margin: 10px auto;
+      }
+      
+      p, blockquote p {
+          line-height: 1.6;
+      }
+      
+      ul, ol {
+          margin: 16px 0;
+      }
+      
+      ul li, ol li {
+          line-height: 1.6;
+      }
+      
+      p {
+          font-weight: lighter;
+          margin: 10px 0;
+      }
+      
+      strong {
+          font-weight: bold;
+      }
+      
+      ol,
+      ul {
+          margin-left: 2em;
+      }
+      
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          font-weight: lighter;
+          text-transform: capitalize;
+          margin: 20px 0;
+          border-bottom: 1px solid;
+          padding-bottom: 6px;
+      }
+      
+      h1, h1 > code {
+          font-size: 24.624px;
+          line-height: 29.548799999999996px;
+      }
+      
+      h2, h2 > code {
+          font-size: 24.624px;
+          line-height: 29.548799999999996px;
+      }
+      
+      h3, h3 > code {
+          font-size: 23.44px;
+          line-height: 28.128px;
+      }
+      
+      h4, h4 > code {
+          font-size: 22.16px;
+          line-height: 26.592px;
+      }
+      
+      h5, h5 > code {
+          font-size: 22.16px;
+          line-height: 26.592px;
+      }
+      
+      h6, h6 > code {
+          font-size: 22.16px;
+          line-height: 26.592px;
+      }
+      
+      img {
+          margin-bottom: 20px;
+      }
+      
+      h1 img,
+      h2 img,
+      h3 img,
+      h4 img,
+      h5 img,
+      h6 img,
+      p img {
+          margin-bottom: 0;
+      }
+      
+      pre,
+      code {
+          font-family: monospace, Consolas, "Source Code Pro", Arial, sans-serif;
+          color: #586e75;
+          background-color: #eee8d5;
+      }
+      
+      pre {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          padding: 12px;
+          margin-bottom: 20px;
+      }
+      
+      code {
+          border-radius: 3px;
+      }
+      
+      h1 {
+          text-transform: uppercase;
+          font-weight: bold;
+      }
+      
+      h3,
+      h4,
+      h5,
+      h6 {
+          border-bottom: none;
+      }
+      
+      html * {
+          color: #657b83;
+      }
+      
+      html body {
+          background-color: #fdf6e3;
+      }
+      
+      html h1,
+      html h2,
+      html h3,
+      html h4,
+      html h5,
+      html h6 {
+          color: #586e75;
+          border-color: #657b83;
+      }
+      
+      html a,
+      html a:active,
+      html a:visited {
+          color: #586e75;
+          text-decoration: none;
+          border-bottom: 1px dashed;
+          border-radius: 2px;
+      }
+      
+      html a:hover {
+          background-color: #eee8d5;
+      }
+      
+      blockquote a:hover {
+          background-color: #fdf6e3;
+      }
+      
+      html a,
+      html a:active,
+      html a:visited,
+      html code.url {
+          color: #b58900;
+      }
+      
+      html h1 {
+          color: #b58900;
+      }
+      
+      html h2,
+      html h3,
+      html h4,
+      html h5,
+      html h6 {
+          color: #b58900;
+      }
+      
+      /* QUOTES
+      =============================================================================*/
+      blockquote {
+          border-left: 4px solid #b58900;
+          padding: 12px;
+          background: #eee8d5;
+          border-bottom-right-radius: 2px;
+      }
+      
+      blockquote code {
+          background: #fdf6e3;
+      }
+      
+      blockquote > :first-child {
+          margin-top: 0;
+      }
+      
+      blockquote > :last-child {
+          margin-bottom: 0;
+      }
+      
+      /* TABLES
+      =============================================================================*/
+      table {
+          margin: 0 auto;
+          border-collapse: collapse;
+          width: 100%;
+          box-sizing: border-box;
+          margin-bottom: 30px;
+      }
+      
+      table th, table td {
+          border: 1px solid #ccc;
+          padding: 6px 13px;
+      }
+      
+      table td {
+          word-break: break-word;
+          line-height: 1.3;
+      }
+      
+      table th {
+          font-weight: bold;
+          text-align: center !important;
+          background-color: #eee8d5;
+      }
+      
+      table tr {
+          border-top: 1px solid #ccc;
+          background-color: #fdf6e3;
+      }
+      
+      /* IMAGES
+      =============================================================================*/
+      img {
+          max-width: 100%;
+      }
+      
+      p > img {
+          display: table;
+          margin: 0 auto;
+      }
+      
+      p code, li code, td code {
+          padding: 1px 3px;
+          border-radius: 3px;
+      }
+      
+      .cp_embed_wrapper {
+          margin: 20px 0;
+      }
+      
+      @media screen and (min-width: 980px) and (max-width: 980px) {	
+          table thead tr th,
+          table thead tr th > code,
+          table tbody tr td,
+          table tbody tr td > code,
+          table tbody tr td > strong {
+              font-size: 1.3em;
+              line-height: 1.3;
+          }
+      
+          p, p code,
+          p strong, p strong > code,
+          blockquote p {
+              font-size: 1.3em;
+              line-height: 1.6;
+          }
+      
+          pre > code,
+          ul li pre > code,
+          ol li pre > code{
+              font-size: 1.3em;
+              line-height: 1.3;    	
+          }	
+          
+      
+          ul li, ol li,
+          ul li > code,
+          ol li > code {
+              font-size: 1.3em;
+              line-height: 1.3;          
+          }
+      
+          ul {
+              margin-left: 3.4em;
+          }
+      
+          ol {
+              margin-left: 3.6em;
+          }
+      }
+      </style>
+<title>08-介绍下Set_Map_WeakSet和WeakMap的区别</title></head>
+<body><p>Set 和 Map 主要的应用场景在于 <strong>数据重组</strong> 和 <strong>数据储存</strong></p>
+<p>Set 是一种叫做<strong>集合</strong>的数据结构，Map 是一种叫做<strong>字典</strong>的数据结构</p>
+<h3>1. 集合（Set）</h3>
+<p>ES6 新增的一种新的数据结构，类似于数组，但成员是唯一且无序的，没有重复的值。</p>
+<p><strong>Set 本身是一种构造函数，用来生成 Set 数据结构。</strong></p>
+<pre><code class='language-javascript' lang='javascript'>new Set([iterable])
+</code></pre>
+<p>举个例子：</p>
+<pre><code class='language-javascript' lang='javascript'>const s = new Set()
+[1, 2, 3, 4, 3, 2, 1].forEach(x =&gt; s.add(x))
+
+for (let i of s) {
+    console.log(i)	// 1 2 3 4
+}
+
+// 去重数组的重复对象
+let arr = [1, 2, 3, 2, 1, 1]
+[... new Set(arr)]	// [1, 2, 3]
+</code></pre>
+<p>Set 对象允许你储存任何类型的唯一值，无论是原始值或者是对象引用。</p>
+<p>向 Set 加入值的时候，不会发生类型转换，所以<code>5</code>和<code>&quot;5&quot;</code>是两个不同的值。Set 内部判断两个值是否不同，使用的算法叫做“Same-value-zero equality”，它类似于<strong>精确相等</strong>运算符（<code>===</code>），主要的区别是<strong><code>NaN</code>等于自身，而精确相等运算符认为<code>NaN</code>不等于自身。</strong></p>
+<pre><code class='language-javascript' lang='javascript'>let set = new Set();
+let a = NaN;
+let b = NaN;
+set.add(a);
+set.add(b);
+set // Set {NaN}
+
+let set1 = new Set()
+set1.add(5)
+set1.add(&#39;5&#39;)
+console.log([...set1])	// [5, &quot;5&quot;]
+</code></pre>
+<ul>
+<li><p>Set 实例属性</p>
+<ul>
+<li><p>constructor： 构造函数</p>
+</li>
+<li><p>size：元素数量</p>
+<pre><code class='language-javascript' lang='javascript'>let set = new Set([1, 2, 3, 2, 1])
+
+console.log(set.length)	// undefined
+console.log(set.size)	// 3
+</code></pre>
+</li>
+
+</ul>
+</li>
+<li><p>Set 实例方法</p>
+<ul>
+<li><p>操作方法</p>
+<ul>
+<li><p>add(value)：新增，相当于 array里的push</p>
+</li>
+<li><p>delete(value)：存在即删除集合中value</p>
+</li>
+<li><p>has(value)：判断集合中是否存在 value</p>
+</li>
+<li><p>clear()：清空集合</p>
+<hr />
+<pre><code class='language-javascript' lang='javascript'>let set = new Set()
+set.add(1).add(2).add(1)
+
+set.has(1)	// true
+set.has(3)	// false
+set.delete(1)	
+set.has(1)	// false
+</code></pre>
+<p><code>Array.from</code> 方法可以将 Set 结构转为数组</p>
+<pre><code class='language-javascript' lang='javascript'>const items = new Set([1, 2, 3, 2])
+const array = Array.from(items)
+console.log(array)	// [1, 2, 3]
+// 或
+const arr = [...items]
+console.log(arr)	// [1, 2, 3]
+</code></pre>
+</li>
+
+</ul>
+</li>
+<li><p>遍历方法（遍历顺序为插入顺序）</p>
+<ul>
+<li><p>keys()：返回一个包含集合中所有键的迭代器</p>
+</li>
+<li><p>values()：返回一个包含集合中所有值得迭代器</p>
+</li>
+<li><p>entries()：返回一个包含Set对象中所有元素得键值对迭代器</p>
+</li>
+<li><p>forEach(callbackFn, thisArg)：用于对集合成员执行callbackFn操作，如果提供了 thisArg 参数，回调中的this会是这个参数，<strong>没有返回值</strong></p>
+<pre><code class='language-javascript' lang='javascript'>let set = new Set([1, 2, 3])
+console.log(set.keys())	// SetIterator {1, 2, 3}
+console.log(set.values())	// SetIterator {1, 2, 3}
+console.log(set.entries())	// SetIterator {1, 2, 3}
+
+for (let item of set.keys()) {
+  console.log(item);
+}	// 1	2	 3
+for (let item of set.entries()) {
+  console.log(item);
+}	// [1, 1]	[2, 2]	[3, 3]
+
+set.forEach((value, key) =&gt; {
+    console.log(key + &#39; : &#39; + value)
+})	// 1 : 1	2 : 2	3 : 3
+console.log([...set])	// [1, 2, 3]
+</code></pre>
+<p>Set 可默认遍历，默认迭代器生成函数是 values() 方法</p>
+<pre><code class='language-javascript' lang='javascript'>Set.prototype[Symbol.iterator] === Set.prototype.values	// true
+</code></pre>
+<p>所以， Set可以使用 map、filter 方法</p>
+<pre><code class='language-javascript' lang='javascript'>let set = new Set([1, 2, 3])
+set = new Set([...set].map(item =&gt; item * 2))
+console.log([...set])	// [2, 4, 6]
+
+set = new Set([...set].filter(item =&gt; (item &gt;= 4)))
+console.log([...set])	//[4, 6]
+</code></pre>
+<p>因此，Set 很容易实现交集（Intersect）、并集（Union）、差集（Difference）</p>
+<pre><code class='language-javascript' lang='javascript'>let set1 = new Set([1, 2, 3])
+let set2 = new Set([4, 3, 2])
+
+let intersect = new Set([...set1].filter(value =&gt; set2.has(value)))
+let union = new Set([...set1, ...set2])
+let difference = new Set([...set1].filter(value =&gt; !set2.has(value)))
+
+console.log(intersect)	// Set {2, 3}
+console.log(union)		// Set {1, 2, 3, 4}
+console.log(difference)	// Set {1}
+</code></pre>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+<h3>2. WeakSet</h3>
+<p>WeakSet 对象允许你将<strong>弱引用对象</strong>储存在一个集合中</p>
+<p>WeakSet 与 Set 的区别：</p>
+<ul>
+<li>WeakSet 只能储存对象引用，不能存放值，而 Set 对象都可以</li>
+<li>WeakSet 对象中储存的对象值都是被弱引用的，即垃圾回收机制不考虑 WeakSet 对该对象的应用，如果没有其他的变量或属性引用这个对象值，则这个对象将会被垃圾回收掉（不考虑该对象还存在于 WeakSet 中），所以，WeakSet 对象里有多少个成员元素，取决于垃圾回收机制有没有运行，运行前后成员个数可能不一致，遍历结束之后，有的成员可能取不到了（被垃圾回收了），WeakSet 对象是无法被遍历的（ES6 规定 WeakSet 不可遍历），也没有办法拿到它包含的所有元素</li>
+
+</ul>
+<p>属性：</p>
+<ul>
+<li><p>constructor：构造函数，任何一个具有 Iterable 接口的对象，都可以作参数</p>
+<pre><code class='language-javascript' lang='javascript'>const arr = [[1, 2], [3, 4]]
+const weakset = new WeakSet(arr)
+console.log(weakset)
+</code></pre>
+</li>
+
+</ul>
+<p><img src="https://user-images.githubusercontent.com/19721451/54000884-27290900-4184-11e9-92f0-4d19ac6d080b.png" referrerpolicy="no-referrer" alt="img"></p>
+<p>方法：</p>
+<ul>
+<li>add(value)：在WeakSet 对象中添加一个元素value</li>
+<li>has(value)：判断 WeakSet 对象中是否包含value</li>
+<li>delete(value)：删除元素 value</li>
+<li>clear()：清空所有元素，<strong>注意该方法已废弃</strong></li>
+
+</ul>
+<pre><code class='language-javascript' lang='javascript'>var ws = new WeakSet()
+var obj = {}
+var foo = {}
+
+ws.add(window)
+ws.add(obj)
+
+ws.has(window)	// true
+ws.has(foo)	// false
+
+ws.delete(window)	// true
+ws.has(window)	// false
+</code></pre>
+<h3>3. 字典（Map）</h3>
+<p>集合 与 字典 的区别：</p>
+<ul>
+<li>共同点：集合、字典 可以储存不重复的值</li>
+<li>不同点：集合 是以 [value, value]的形式储存元素，字典 是以 [key, value] 的形式储存</li>
+
+</ul>
+<pre><code class='language-javascript' lang='javascript'>const m = new Map()
+const o = {p: &#39;haha&#39;}
+m.set(o, &#39;content&#39;)
+m.get(o)	// content
+
+m.has(o)	// true
+m.delete(o)	// true
+m.has(o)	// false
+</code></pre>
+<p><strong>任何具有 Iterator 接口、且每个成员都是一个双元素的数组的数据结构</strong>都可以当作<code>Map</code>构造函数的参数，例如：</p>
+<pre><code class='language-javascript' lang='javascript'>const set = new Set([
+  [&#39;foo&#39;, 1],
+  [&#39;bar&#39;, 2]
+]);
+const m1 = new Map(set);
+m1.get(&#39;foo&#39;) // 1
+
+const m2 = new Map([[&#39;baz&#39;, 3]]);
+const m3 = new Map(m2);
+m3.get(&#39;baz&#39;) // 3
+</code></pre>
+<p>如果读取一个未知的键，则返回<code>undefined</code>。</p>
+<pre><code class='language-javascript' lang='javascript'>new Map().get(&#39;asfddfsasadf&#39;)
+// undefined
+</code></pre>
+<p>注意，只有对同一个对象的引用，Map 结构才将其视为同一个键。这一点要非常小心。</p>
+<pre><code class='language-javascript' lang='javascript'>const map = new Map();
+
+map.set([&#39;a&#39;], 555);
+map.get([&#39;a&#39;]) // undefined
+</code></pre>
+<p>上面代码的<code>set</code>和<code>get</code>方法，表面是针对同一个键，但实际上这是两个值，内存地址是不一样的，因此<code>get</code>方法无法读取该键，返回<code>undefined</code>。</p>
+<p>由上可知，Map 的键实际上是跟内存地址绑定的，只要内存地址不一样，就视为两个键。这就解决了同名属性碰撞（clash）的问题，我们扩展别人的库的时候，如果使用对象作为键名，就不用担心自己的属性与原作者的属性同名。</p>
+<p>如果 Map 的键是一个简单类型的值（数字、字符串、布尔值），则只要两个值严格相等，Map 将其视为一个键，比如<code>0</code>和<code>-0</code>就是一个键，布尔值<code>true</code>和字符串<code>true</code>则是两个不同的键。另外，<code>undefined</code>和<code>null</code>也是两个不同的键。虽然<code>NaN</code>不严格相等于自身，但 Map 将其视为同一个键。</p>
+<pre><code class='language-javascript' lang='javascript'>let map = new Map();
+
+map.set(-0, 123);
+map.get(+0) // 123
+
+map.set(true, 1);
+map.set(&#39;true&#39;, 2);
+map.get(true) // 1
+
+map.set(undefined, 3);
+map.set(null, 4);
+map.get(undefined) // 3
+
+map.set(NaN, 123);
+map.get(NaN) // 123
+</code></pre>
+<p>Map 的属性及方法</p>
+<p>属性：</p>
+<ul>
+<li><p>constructor：构造函数</p>
+</li>
+<li><p>size：返回字典中所包含的元素个数</p>
+<pre><code class='language-javascript' lang='javascript'>const map = new Map([
+  [&#39;name&#39;, &#39;An&#39;],
+  [&#39;des&#39;, &#39;JS&#39;]
+]);
+
+map.size // 2
+</code></pre>
+</li>
+
+</ul>
+<p>操作方法：</p>
+<ul>
+<li>set(key, value)：向字典中添加新元素</li>
+<li>get(key)：通过键查找特定的数值并返回</li>
+<li>has(key)：判断字典中是否存在键key</li>
+<li>delete(key)：通过键 key 从字典中移除对应的数据</li>
+<li>clear()：将这个字典中的所有元素删除</li>
+
+</ul>
+<p>遍历方法</p>
+<ul>
+<li>Keys()：将字典中包含的所有键名以迭代器形式返回</li>
+<li>values()：将字典中包含的所有数值以迭代器形式返回</li>
+<li>entries()：返回所有成员的迭代器</li>
+<li>forEach()：遍历字典的所有成员</li>
+
+</ul>
+<pre><code class='language-javascript' lang='javascript'>const map = new Map([
+            [&#39;name&#39;, &#39;An&#39;],
+            [&#39;des&#39;, &#39;JS&#39;]
+        ]);
+console.log(map.entries())	// MapIterator {&quot;name&quot; =&gt; &quot;An&quot;, &quot;des&quot; =&gt; &quot;JS&quot;}
+console.log(map.keys()) // MapIterator {&quot;name&quot;, &quot;des&quot;}
+</code></pre>
+<p>Map 结构的默认遍历器接口（<code>Symbol.iterator</code>属性），就是<code>entries</code>方法。</p>
+<pre><code class='language-javascript' lang='javascript'>map[Symbol.iterator] === map.entries
+// true
+</code></pre>
+<p>Map 结构转为数组结构，比较快速的方法是使用扩展运算符（<code>...</code>）。</p>
+<p>对于 forEach ，看一个例子</p>
+<pre><code class='language-javascript' lang='javascript'>const reporter = {
+  report: function(key, value) {
+    console.log(&quot;Key: %s, Value: %s&quot;, key, value);
+  }
+};
+
+let map = new Map([
+    [&#39;name&#39;, &#39;An&#39;],
+    [&#39;des&#39;, &#39;JS&#39;]
+])
+map.forEach(function(value, key, map) {
+  this.report(key, value);
+}, reporter);
+// Key: name, Value: An
+// Key: des, Value: JS
+</code></pre>
+<p>在这个例子中， forEach 方法的回调函数的 this，就指向 reporter</p>
+<p><strong>与其他数据结构的相互转换</strong></p>
+<ol start='' >
+<li><p>Map 转 Array</p>
+<pre><code class='language-javascript' lang='javascript'>const map = new Map([[1, 1], [2, 2], [3, 3]])
+console.log([...map])	// [[1, 1], [2, 2], [3, 3]]
+</code></pre>
+</li>
+<li><p>Array 转 Map</p>
+<pre><code class='language-javascript' lang='javascript'>const map = new Map([[1, 1], [2, 2], [3, 3]])
+console.log(map)	// Map {1 =&gt; 1, 2 =&gt; 2, 3 =&gt; 3}
+</code></pre>
+</li>
+<li><p>Map 转 Object</p>
+<p>因为 Object 的键名都为字符串，而Map 的键名为对象，所以转换的时候会把非字符串键名转换为字符串键名。</p>
+<pre><code class='language-javascript' lang='javascript'>function mapToObj(map) {
+    let obj = Object.create(null)
+    for (let [key, value] of map) {
+        obj[key] = value
+    }
+    return obj
+}
+const map = new Map().set(&#39;name&#39;, &#39;An&#39;).set(&#39;des&#39;, &#39;JS&#39;)
+mapToObj(map)  // {name: &quot;An&quot;, des: &quot;JS&quot;}
+</code></pre>
+</li>
+<li><p>Object 转 Map</p>
+<pre><code class='language-javascript' lang='javascript'>function objToMap(obj) {
+    let map = new Map()
+    for (let key of Object.keys(obj)) {
+        map.set(key, obj[key])
+    }
+    return map
+}
+
+objToMap({&#39;name&#39;: &#39;An&#39;, &#39;des&#39;: &#39;JS&#39;}) // Map {&quot;name&quot; =&gt; &quot;An&quot;, &quot;des&quot; =&gt; &quot;JS&quot;}
+</code></pre>
+</li>
+<li><p>Map 转 JSON</p>
+<pre><code class='language-javascript' lang='javascript'>function mapToJson(map) {
+    return JSON.stringify([...map])
+}
+
+let map = new Map().set(&#39;name&#39;, &#39;An&#39;).set(&#39;des&#39;, &#39;JS&#39;)
+mapToJson(map)	// [[&quot;name&quot;,&quot;An&quot;],[&quot;des&quot;,&quot;JS&quot;]]
+</code></pre>
+</li>
+<li><p>JSON 转 Map</p>
+<pre><code class='language-javascript' lang='javascript'>function jsonToStrMap(jsonStr) {
+  return objToMap(JSON.parse(jsonStr));
+}
+
+jsonToStrMap(&#39;{&quot;name&quot;: &quot;An&quot;, &quot;des&quot;: &quot;JS&quot;}&#39;) // Map {&quot;name&quot; =&gt; &quot;An&quot;, &quot;des&quot; =&gt; &quot;JS&quot;}
+</code></pre>
+</li>
+
+</ol>
+<h3>4. WeakMap</h3>
+<p>WeakMap 对象是一组键值对的集合，其中的<strong>键是弱引用对象，而值可以是任意</strong>。</p>
+<p><strong>注意，WeakMap 弱引用的只是键名，而不是键值。键值依然是正常引用。</strong></p>
+<p>WeakMap 中，每个键对自己所引用对象的引用都是弱引用，在没有其他引用和该键引用同一对象，这个对象将会被垃圾回收（相应的key则变成无效的），所以，WeakMap 的 key 是不可枚举的。</p>
+<p>属性：</p>
+<ul>
+<li>constructor：构造函数</li>
+
+</ul>
+<p>方法：</p>
+<ul>
+<li>has(key)：判断是否有 key 关联对象</li>
+<li>get(key)：返回key关联对象（没有则则返回 undefined）</li>
+<li>set(key)：设置一组key关联对象</li>
+<li>delete(key)：移除 key 的关联对象</li>
+
+</ul>
+<pre><code class='language-javascript' lang='javascript'>let myElement = document.getElementById(&#39;logo&#39;);
+let myWeakmap = new WeakMap();
+
+myWeakmap.set(myElement, {timesClicked: 0});
+
+myElement.addEventListener(&#39;click&#39;, function() {
+  let logoData = myWeakmap.get(myElement);
+  logoData.timesClicked++;
+}, false);
+</code></pre>
+<h1>介绍下Set_Map_WeakSet和WeakMap的区别</h1>
+<h3>5. 总结</h3>
+<ul>
+<li><p>Set</p>
+<ul>
+<li>成员唯一、无序且不重复</li>
+<li>[value, value]，键值与键名是一致的（或者说只有键值，没有键名）</li>
+<li>可以遍历，方法有：add、delete、has</li>
+
+</ul>
+</li>
+<li><p>WeakSet</p>
+<ul>
+<li>成员都是对象</li>
+<li>成员都是弱引用，可以被垃圾回收机制回收，可以用来保存DOM节点，不容易造成内存泄漏</li>
+<li>不能遍历，方法有add、delete、has</li>
+
+</ul>
+</li>
+<li><p>Map</p>
+<ul>
+<li>本质上是键值对的集合，类似集合</li>
+<li>可以遍历，方法很多可以跟各种数据格式转换</li>
+
+</ul>
+</li>
+<li><p>WeakMap</p>
+<ul>
+<li>只接受对象作为键名（null除外），不接受其他类型的值作为键名</li>
+<li>键名是弱引用，键值可以是任意的，键名所指向的对象可以被垃圾回收，此时键名是无效的</li>
+<li>不能遍历，方法有get、set、has、delete</li>
+
+</ul>
+</li>
+
+</ul>
+<h3>6. 扩展：Object与Set、Map</h3>
+<ol start='' >
+<li><p>Object 与 Set</p>
+<pre><code class='language-javascript' lang='javascript'>// Object
+const properties1 = {
+    &#39;width&#39;: 1,
+    &#39;height&#39;: 1
+}
+console.log(properties1[&#39;width&#39;]? true: false) // true
+
+// Set
+const properties2 = new Set()
+properties2.add(&#39;width&#39;)
+properties2.add(&#39;height&#39;)
+console.log(properties2.has(&#39;width&#39;)) // true
+</code></pre>
+</li>
+<li><p>Object 与 Map</p>
+</li>
+
+</ol>
+<h1>ES6 WeakMap和WeakSet的使用场景</h1>
+<p>JS 中的对象（Object），本质上是键值对的集合（hash 结构）</p>
+<pre><code class='language-javascript' lang='javascript'>const data = {};
+const element = document.getElementsByClassName(&#39;App&#39;);
+
+data[element] = &#39;metadata&#39;;
+console.log(data[&#39;[object HTMLCollection]&#39;]) // &quot;metadata&quot;
+</code></pre>
+<p>但当以一个DOM节点作为对象 data 的键，对象会被自动转化为字符串[Object HTMLCollection]，所以说，Object 结构提供了 <strong>字符串-值</strong> 对应，Map则提供了 <strong>值-值</strong> 的对应</p>
+<p>本</p>
+<p>JavaScript垃圾回收是一种内存管理技术。在这种技术中，不再被引用的对象会被自动删除，而与其相关的资源也会被一同回收。</p>
+<p>Map和Set中对象的引用都是强类型化的，并不会允许垃圾回收。这样一来，如果Map和Set中引用了不再需要的大型对象，如已经从DOM树中删除的DOM元素，那么其回收代价是昂贵的。</p>
+<p>为了解决这个问题，ES6还引入了另外两种新的数据结构，即称为WeakMap和WeakSet的弱集合。这些集合之所以是“<strong>弱的</strong>”，是因为它们允许从内存中清除不再需要的被这些集合所引用的对象。</p>
+<p> </p>
+<p>使用场景：<strong>储存 DOM 节点，而不用担心这些节点从文档移除时，会引发内存泄漏</strong>。</p>
+</body>
+</html>

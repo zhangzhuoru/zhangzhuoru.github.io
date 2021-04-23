@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    ol,
+    ul,
+    li,
+    img {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    
+    html * {
+        font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+        font-size: 16px;
+        line-height: 19.2px;
+        color-profile: sRGB;
+    }
+    
+    body {
+        min-width: 32em;
+        max-width: 56em;
+        margin: 10px auto;
+    }
+    
+    p, blockquote p {
+        line-height: 1.6;
+    }
+    
+    ul, ol {
+        margin: 16px 0;
+    }
+    
+    ul li, ol li {
+        line-height: 1.6;
+    }
+    
+    p {
+        font-weight: lighter;
+        margin: 10px 0;
+    }
+    
+    strong {
+        font-weight: bold;
+    }
+    
+    ol,
+    ul {
+        margin-left: 2em;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: lighter;
+        text-transform: capitalize;
+        margin: 20px 0;
+        border-bottom: 1px solid;
+        padding-bottom: 6px;
+    }
+    
+    h1, h1 > code {
+        font-size: 24.624px;
+        line-height: 29.548799999999996px;
+    }
+    
+    h2, h2 > code {
+        font-size: 24.624px;
+        line-height: 29.548799999999996px;
+    }
+    
+    h3, h3 > code {
+        font-size: 23.44px;
+        line-height: 28.128px;
+    }
+    
+    h4, h4 > code {
+        font-size: 22.16px;
+        line-height: 26.592px;
+    }
+    
+    h5, h5 > code {
+        font-size: 22.16px;
+        line-height: 26.592px;
+    }
+    
+    h6, h6 > code {
+        font-size: 22.16px;
+        line-height: 26.592px;
+    }
+    
+    img {
+        margin-bottom: 20px;
+    }
+    
+    h1 img,
+    h2 img,
+    h3 img,
+    h4 img,
+    h5 img,
+    h6 img,
+    p img {
+        margin-bottom: 0;
+    }
+    
+    pre,
+    code {
+        font-family: monospace, Consolas, "Source Code Pro", Arial, sans-serif;
+        color: #586e75;
+        background-color: #eee8d5;
+    }
+    
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+    
+    code {
+        border-radius: 3px;
+    }
+    
+    h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    h3,
+    h4,
+    h5,
+    h6 {
+        border-bottom: none;
+    }
+    
+    html * {
+        color: #657b83;
+    }
+    
+    html body {
+        background-color: #fdf6e3;
+    }
+    
+    html h1,
+    html h2,
+    html h3,
+    html h4,
+    html h5,
+    html h6 {
+        color: #586e75;
+        border-color: #657b83;
+    }
+    
+    html a,
+    html a:active,
+    html a:visited {
+        color: #586e75;
+        text-decoration: none;
+        border-bottom: 1px dashed;
+        border-radius: 2px;
+    }
+    
+    html a:hover {
+        background-color: #eee8d5;
+    }
+    
+    blockquote a:hover {
+        background-color: #fdf6e3;
+    }
+    
+    html a,
+    html a:active,
+    html a:visited,
+    html code.url {
+        color: #b58900;
+    }
+    
+    html h1 {
+        color: #b58900;
+    }
+    
+    html h2,
+    html h3,
+    html h4,
+    html h5,
+    html h6 {
+        color: #b58900;
+    }
+    
+    /* QUOTES
+    =============================================================================*/
+    blockquote {
+        border-left: 4px solid #b58900;
+        padding: 12px;
+        background: #eee8d5;
+        border-bottom-right-radius: 2px;
+    }
+    
+    blockquote code {
+        background: #fdf6e3;
+    }
+    
+    blockquote > :first-child {
+        margin-top: 0;
+    }
+    
+    blockquote > :last-child {
+        margin-bottom: 0;
+    }
+    
+    /* TABLES
+    =============================================================================*/
+    table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+    }
+    
+    table th, table td {
+        border: 1px solid #ccc;
+        padding: 6px 13px;
+    }
+    
+    table td {
+        word-break: break-word;
+        line-height: 1.3;
+    }
+    
+    table th {
+        font-weight: bold;
+        text-align: center !important;
+        background-color: #eee8d5;
+    }
+    
+    table tr {
+        border-top: 1px solid #ccc;
+        background-color: #fdf6e3;
+    }
+    
+    /* IMAGES
+    =============================================================================*/
+    img {
+        max-width: 100%;
+    }
+    
+    p > img {
+        display: table;
+        margin: 0 auto;
+    }
+    
+    p code, li code, td code {
+        padding: 1px 3px;
+        border-radius: 3px;
+    }
+    
+    .cp_embed_wrapper {
+        margin: 20px 0;
+    }
+    
+    @media screen and (min-width: 980px) and (max-width: 980px) {	
+        table thead tr th,
+        table thead tr th > code,
+        table tbody tr td,
+        table tbody tr td > code,
+        table tbody tr td > strong {
+            font-size: 1.3em;
+            line-height: 1.3;
+        }
+    
+        p, p code,
+        p strong, p strong > code,
+        blockquote p {
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+    
+        pre > code,
+        ul li pre > code,
+        ol li pre > code{
+            font-size: 1.3em;
+            line-height: 1.3;    	
+        }	
+        
+    
+        ul li, ol li,
+        ul li > code,
+        ol li > code {
+            font-size: 1.3em;
+            line-height: 1.3;          
+        }
+    
+        ul {
+            margin-left: 3.4em;
+        }
+    
+        ol {
+            margin-left: 3.6em;
+        }
+    }
+    </style>
+<title>02-DIV水平垂直居中</title></head>
+<body><h1>div水平垂直居中的方法</h1>
+<p>在平时，我们经常会碰到让一个div框针对某个模块上下左右都居中（水平垂直居中），其实针对这种情况，我们有多种方法实现。</p>
+<p><strong>方法一:</strong></p>
+<p>　　绝对定位方法：不确定当前div的宽度和高度，采用 transform: translate(-50%,-50%); 当前div的父级添加相对定位（position: relative;）</p>
+<p>　　图片展示：</p>
+<p>　　<img src="https://images2018.cnblogs.com/blog/1337908/201805/1337908-20180510132530310-507426098.png" referrerpolicy="no-referrer" alt="img"></p>
+<p>　　代码如下：</p>
+<pre><code>div{
+    background:red;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+</code></pre>
+<p>　</p>
+<p><strong>方法二:</strong></p>
+<p>　　绝对定位方法：确定了当前div的宽度，margin值为当前div宽度一半的负值</p>
+<p>　　图片展示： 如方法一的图片展示</p>
+<p>　　代码如下：</p>
+<pre><code>div{
+    width:600px;
+    height: 600px;
+    background:red;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left:-300px;
+    margin-top:-300px;
+}
+</code></pre>
+<p>　　</p>
+<p><strong>方法三：</strong></p>
+<p>　　绝对定位方法：绝对定位下top left right bottom 都设置0</p>
+<p>　　图片展示： 如方法一的图片展示</p>
+<p>　　代码如下：</p>
+<pre><code>div.child{
+    width: 600px;
+    height: 600px;
+    background: red;
+    position:absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+</code></pre>
+<p>　　</p>
+<p><strong>方法四:</strong></p>
+<p>　　flex布局方法：当前div的父级添加flex css样式</p>
+<p>   展示图如下：</p>
+<p>　　<img src="https://images2018.cnblogs.com/blog/1337908/201805/1337908-20180510131947523-2121210494.png" referrerpolicy="no-referrer" alt="img"></p>
+<p>　　代码如下：</p>
+<pre><code>.box{
+    height:800px;
+    -webkit-display:flex;
+    display:flex;
+    -webkit-align-items:center;
+    align-items:center;
+    -webkit-justify-content:center;
+    justify-content:center;
+    border:1px solid #ccc;
+}
+div.child{
+    width:600px;
+    height:600px;
+    background-color:red;
+}
+</code></pre>
+<p>　　</p>
+<p><strong>方法五:</strong></p>
+<p>　　table-cell实现水平垂直居中: table-cell middle center组合使用</p>
+<p>   展示图如下：</p>
+<p>  <img src="https://images2018.cnblogs.com/blog/1337908/201805/1337908-20180510131450441-915853082.png" referrerpolicy="no-referrer" alt="img"></p>
+<p>   代码如下：</p>
+<pre><code>.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 240px;
+    height: 180px;
+    border:1px solid #666;
+}
+</code></pre>
+<p>　　</p>
+<p><strong>方法六:</strong></p>
+<p>　　绝对定位：calc() 函数动态计算实现水平垂直居中</p>
+<p>　　展示图如下：</p>
+<p><img src="https://images2018.cnblogs.com/blog/1337908/201805/1337908-20180510131414396-1900857513.png" referrerpolicy="no-referrer" alt="img"></p>
+<p>　　代码如下：</p>
+<pre><code>.calc{
+  position: relative;
+  border: 1px solid #ccc;
+  width: 400px;
+  height: 160px;
+}
+.calc .child{
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  left:-webkit-calc((400px - 200px)/2);
+  top:-webkit-calc((160px - 50px)/2);
+  left:-moz-calc((400px - 200px)/2);
+  top:-moz-calc((160px - 50px)/2);
+  left:calc((400px - 200px)/2);
+  top:calc((160px - 50px)/2);
+}　　
+</code></pre>
+</body>
+</html>

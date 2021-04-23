@@ -1,0 +1,645 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      ol,
+      ul,
+      li,
+      img {
+          margin: 0;
+          padding: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline;
+      }
+      
+      html * {
+          font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+          font-size: 16px;
+          line-height: 19.2px;
+          color-profile: sRGB;
+      }
+      
+      body {
+          min-width: 32em;
+          max-width: 56em;
+          margin: 10px auto;
+      }
+      
+      p, blockquote p {
+          line-height: 1.6;
+      }
+      
+      ul, ol {
+          margin: 16px 0;
+      }
+      
+      ul li, ol li {
+          line-height: 1.6;
+      }
+      
+      p {
+          font-weight: lighter;
+          margin: 10px 0;
+      }
+      
+      strong {
+          font-weight: bold;
+      }
+      
+      ol,
+      ul {
+          margin-left: 2em;
+      }
+      
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          font-weight: lighter;
+          text-transform: capitalize;
+          margin: 20px 0;
+          border-bottom: 1px solid;
+          padding-bottom: 6px;
+      }
+      
+      h1, h1 > code {
+          font-size: 24.624px;
+          line-height: 29.548799999999996px;
+      }
+      
+      h2, h2 > code {
+          font-size: 24.624px;
+          line-height: 29.548799999999996px;
+      }
+      
+      h3, h3 > code {
+          font-size: 23.44px;
+          line-height: 28.128px;
+      }
+      
+      h4, h4 > code {
+          font-size: 22.16px;
+          line-height: 26.592px;
+      }
+      
+      h5, h5 > code {
+          font-size: 22.16px;
+          line-height: 26.592px;
+      }
+      
+      h6, h6 > code {
+          font-size: 22.16px;
+          line-height: 26.592px;
+      }
+      
+      img {
+          margin-bottom: 20px;
+      }
+      
+      h1 img,
+      h2 img,
+      h3 img,
+      h4 img,
+      h5 img,
+      h6 img,
+      p img {
+          margin-bottom: 0;
+      }
+      
+      pre,
+      code {
+          font-family: monospace, Consolas, "Source Code Pro", Arial, sans-serif;
+          color: #586e75;
+          background-color: #eee8d5;
+      }
+      
+      pre {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          padding: 12px;
+          margin-bottom: 20px;
+      }
+      
+      code {
+          border-radius: 3px;
+      }
+      
+      h1 {
+          text-transform: uppercase;
+          font-weight: bold;
+      }
+      
+      h3,
+      h4,
+      h5,
+      h6 {
+          border-bottom: none;
+      }
+      
+      html * {
+          color: #657b83;
+      }
+      
+      html body {
+          background-color: #fdf6e3;
+      }
+      
+      html h1,
+      html h2,
+      html h3,
+      html h4,
+      html h5,
+      html h6 {
+          color: #586e75;
+          border-color: #657b83;
+      }
+      
+      html a,
+      html a:active,
+      html a:visited {
+          color: #586e75;
+          text-decoration: none;
+          border-bottom: 1px dashed;
+          border-radius: 2px;
+      }
+      
+      html a:hover {
+          background-color: #eee8d5;
+      }
+      
+      blockquote a:hover {
+          background-color: #fdf6e3;
+      }
+      
+      html a,
+      html a:active,
+      html a:visited,
+      html code.url {
+          color: #b58900;
+      }
+      
+      html h1 {
+          color: #b58900;
+      }
+      
+      html h2,
+      html h3,
+      html h4,
+      html h5,
+      html h6 {
+          color: #b58900;
+      }
+      
+      /* QUOTES
+      =============================================================================*/
+      blockquote {
+          border-left: 4px solid #b58900;
+          padding: 12px;
+          background: #eee8d5;
+          border-bottom-right-radius: 2px;
+      }
+      
+      blockquote code {
+          background: #fdf6e3;
+      }
+      
+      blockquote > :first-child {
+          margin-top: 0;
+      }
+      
+      blockquote > :last-child {
+          margin-bottom: 0;
+      }
+      
+      /* TABLES
+      =============================================================================*/
+      table {
+          margin: 0 auto;
+          border-collapse: collapse;
+          width: 100%;
+          box-sizing: border-box;
+          margin-bottom: 30px;
+      }
+      
+      table th, table td {
+          border: 1px solid #ccc;
+          padding: 6px 13px;
+      }
+      
+      table td {
+          word-break: break-word;
+          line-height: 1.3;
+      }
+      
+      table th {
+          font-weight: bold;
+          text-align: center !important;
+          background-color: #eee8d5;
+      }
+      
+      table tr {
+          border-top: 1px solid #ccc;
+          background-color: #fdf6e3;
+      }
+      
+      /* IMAGES
+      =============================================================================*/
+      img {
+          max-width: 100%;
+      }
+      
+      p > img {
+          display: table;
+          margin: 0 auto;
+      }
+      
+      p code, li code, td code {
+          padding: 1px 3px;
+          border-radius: 3px;
+      }
+      
+      .cp_embed_wrapper {
+          margin: 20px 0;
+      }
+      
+      @media screen and (min-width: 980px) and (max-width: 980px) {	
+          table thead tr th,
+          table thead tr th > code,
+          table tbody tr td,
+          table tbody tr td > code,
+          table tbody tr td > strong {
+              font-size: 1.3em;
+              line-height: 1.3;
+          }
+      
+          p, p code,
+          p strong, p strong > code,
+          blockquote p {
+              font-size: 1.3em;
+              line-height: 1.6;
+          }
+      
+          pre > code,
+          ul li pre > code,
+          ol li pre > code{
+              font-size: 1.3em;
+              line-height: 1.3;    	
+          }	
+          
+      
+          ul li, ol li,
+          ul li > code,
+          ol li > code {
+              font-size: 1.3em;
+              line-height: 1.3;          
+          }
+      
+          ul {
+              margin-left: 3.4em;
+          }
+      
+          ol {
+              margin-left: 3.6em;
+          }
+      }
+      </style>
+<title>15-前端传统布局</title></head>
+<body><p>圣杯布局和双飞翼布局是前端工程师需要日常掌握的重要布局方式。两者的功能相同，都是为了实现一个<strong>两侧宽度固定，中间宽度自适应的三栏布局</strong>。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-ab11463cd3c26105.png?imageMogr2/auto-orient/strip|imageView2/2/w/981/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>圣杯布局与双飞翼布局</p>
+<p>&nbsp;</p>
+<p>圣杯布局来源于文章<a href='https://alistapart.com/article/holygrail'>In Search of the Holy Grail</a>，而双飞翼布局来源于淘宝UED。虽然两者的实现方法略有差异，不过都遵循了以下要点：</p>
+<ul>
+<li>两侧宽度固定，中间宽度自适应</li>
+<li>中间部分在DOM结构上优先，以便先行渲染</li>
+<li>允许三列中的任意一列成为最高列</li>
+<li>只需要使用一个额外的``标签</li>
+
+</ul>
+<p>下面我将依次介绍圣杯布局和双飞翼布局的实现方法，并在最后根据个人思考对原有方法做出一些修改，给出其它一些可行的方案。</p>
+<h2>圣杯布局</h2>
+<h3>1. DOM结构</h3>
+<p>&nbsp;</p>
+<pre><code class='language-xml' lang='xml'>&lt;div id=&quot;header&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;container&quot;&gt;
+  &lt;div id=&quot;center&quot; class=&quot;column&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;left&quot; class=&quot;column&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;right&quot; class=&quot;column&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;footer&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>首先定义出整个布局的DOM结构，主体部分是由<code>container</code>包裹的<code>center</code>,<code>left</code>,<code>right</code>三列，其中<code>center</code>定义在最前面。</p>
+<h3>2. CSS代码</h3>
+<p>假设左侧的固定宽度为200px，右侧的固定宽度为150px，则首先在<code>container</code>上设置：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>#container {
+  padding-left: 200px; 
+  padding-right: 150px;
+}
+</code></pre>
+<p>为左右两列预留出相应的空间，得到如下示意图：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-aaea086d37ac9e06.png?imageMogr2/auto-orient/strip|imageView2/2/w/540/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>创建布局框架</p>
+<p>随后分别为三列设置宽度与浮动，同时对<code>footer</code>设置清除浮动：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>#container .column {
+  float: left;
+}
+
+#center {
+  width: 100%;
+}
+
+#left {
+  width: 200px; 
+}
+
+#right {
+  width: 150px; 
+}
+
+#footer {
+  clear: both;
+}
+</code></pre>
+<p>得到如下效果：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-908ab18834f384ca.png?imageMogr2/auto-orient/strip|imageView2/2/w/540/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>设置宽度和清除浮动</p>
+<p>根据浮动的特性，由于<code>center</code>的宽度为100%，即占据了第一行的所有空间，所以<code>left</code>和<code>right</code>被“挤”到了第二行。</p>
+<p>接下来的工作是将<code>left</code>放置到之前预留出的位置上，这里使用<strong><a href='https://www.cnblogs.com/2050/archive/2012/08/13/2636467.html'>负外边距</a>（nagetive margin）</strong>：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>#left {
+  width: 200px; 
+  margin-left: -100%;
+}
+</code></pre>
+<p>得到：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-0092cb112431e076.png?imageMogr2/auto-orient/strip|imageView2/2/w/540/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>将left移动到预留位置-1</p>
+<p>随后还需要使用<strong>定位(position)</strong>方法：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>#left {
+  width: 200px; 
+  margin-left: -100%;
+  position: relative;
+  right: 200px;
+}
+</code></pre>
+<p>这里使用<code>position: relative</code>和<code>right: 200px</code>将<code>left</code>的位置在原有位置基础上左移200px，以完成<code>left</code>的放置：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-0f0134d16c865fb9.png?imageMogr2/auto-orient/strip|imageView2/2/w/540/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>将left移动到预留位置-2</p>
+<p>接下来放置<code>right</code>，只需添加一条声明即可：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>#right {
+  width: 150px; 
+  margin-right: -150px; 
+}
+</code></pre>
+<p>得到最终的效果图：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-e964c6f980b5da16.png?imageMogr2/auto-orient/strip|imageView2/2/w/540/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>将right移动到预留位置</p>
+<p>至此，布局效果完成。不过还需要考虑最后一步，那就是<strong>页面的最小宽度</strong>：要想保证该布局效果正常显示，由于两侧都具有固定的宽度，所以需要给定页面一个最小的宽度，但这并不只是简单的200+150=350px。回想之前<code>left</code>使用了<code>position: relative</code>，所以就意味着在<code>center</code>开始的区域，还存在着一个<code>left</code>的宽度。所以页面的最小宽度应该设置为200+150+200=550px：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>body {
+  min-width: 550px;
+}
+</code></pre>
+<p>综上所述，圣杯布局的CSS代码为：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>body {
+  min-width: 550px;
+}
+
+#container {
+  padding-left: 200px; 
+  padding-right: 150px;
+}
+
+#container .column {
+  float: left;
+}
+
+#center {
+  width: 100%;
+}
+
+#left {
+  width: 200px; 
+  margin-left: -100%;
+  position: relative;
+  right: 200px;
+}
+
+#right {
+  width: 150px; 
+  margin-right: -150px; 
+}
+
+#footer {
+  clear: both;
+}
+</code></pre>
+<p>关于圣杯布局的示例，可参考：<a href='https://litaooooo.github.io/page-examples/holy-grail.html'>圣杯布局</a></p>
+<p>最后提醒一下很多朋友可能会忽略的小细节：在<code>#center</code>中，包含了一条声明<code>width: 100%</code>，这是中间栏能够做到自适应的关键。可能会有朋友认为不需要设置这条声明，因为觉得<code>center</code>在不设置宽度的情况下会默认将宽度设置为父元素(<code>container</code>)的100%宽度。但需要注意到，<code>center</code>是浮动元素，由于浮动具有<strong>包裹性</strong>，在不显式设置宽度的情况下会自动“收缩”到内容的尺寸大小。如果去掉<code>width: 100%</code>，则当中间栏不包含或者包含较少内容时，整个布局会“崩掉”，而达不到这样的效果：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-09a8a5617072d0a2.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/904/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>中间栏仅包含较少内容</p>
+<p>&nbsp;</p>
+<h2>双飞翼布局</h2>
+<h3>1. DOM结构</h3>
+<p>&nbsp;</p>
+<pre><code class='language-xml' lang='xml'>&lt;body&gt;
+  &lt;div id=&quot;header&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;container&quot; class=&quot;column&quot;&gt;
+    &lt;div id=&quot;center&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;left&quot; class=&quot;column&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;right&quot; class=&quot;column&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;footer&quot;&gt;&lt;/div&gt;
+&lt;body&gt;
+</code></pre>
+<p>双飞翼布局的DOM结构与圣杯布局的区别是用<code>container</code>仅包裹住<code>center</code>，另外将<code>.column</code>类从<code>center</code>移至<code>container</code>上。</p>
+<h3>2. CSS代码</h3>
+<p>按照与圣杯布局相同的思路，首先设置各列的宽度与浮动，并且为左右两列预留出空间，以及为<code>footer</code>设置浮动清除：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>#container {
+  width: 100%;
+}
+
+.column {
+  float: left;
+}
+
+#center {
+  margin-left: 200px;
+  margin-right: 150px;
+}
+
+#left {
+  width: 200px; 
+}
+
+#right {
+  width: 150px; 
+}
+
+#footer {
+  clear: both;
+}
+</code></pre>
+<p>得到如下效果示意图：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-a0f387a0dc99d388.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>双飞翼布局初始设置</p>
+<p>以上代码将<code>container</code>,<code>left</code>,<code>right</code>设置为<code>float: left</code>，而在<code>container</code>内部，<code>center</code>由于没有设置浮动，所以其宽度默认为<code>container</code>的100%宽度，通过对其设置<code>margin-left</code>和<code>margin-right</code>为左右两列预留出了空间。</p>
+<p>将<code>left</code>放置到预留位置：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>#left {
+  width: 200px; 
+  margin-left: -100%;
+}
+</code></pre>
+<p>得到：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-7fcff771168c26cb.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>放置left到预留位置</p>
+<p>将<code>right</code>放置到预留位置：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>#right {
+  width: 150px; 
+  margin-left: -150px;
+}
+</code></pre>
+<p>得到最终效果：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-639e4da232d31e21.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>双飞翼布局最终效果</p>
+<p>最后计算最小页面宽度：由于双飞翼布局没有用到<code>position:relative</code>进行定位，所以最小页面宽度应该为200+150=350px。但是当页面宽度缩小到350px附近时，会挤占中间栏的宽度，使得其内容被右侧栏覆盖，如下所示：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-7612899f07163703.png?imageMogr2/auto-orient/strip|imageView2/2/w/442/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>中间栏内容被覆盖</p>
+<p>&nbsp;</p>
+<p>因此在设置最小页面宽度时，应该适当增加一些宽度以供中间栏使用（假设为150px），则有：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>body {
+  min-width: 500px;
+}
+</code></pre>
+<p>至此双飞翼布局大功告成！其布局整体代码为：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>body {
+  min-width: 500px;
+}
+
+#container {
+  width: 100%;
+}
+
+.column {
+  float: left;
+}
+        
+#center {
+  margin-left: 200px;
+  margin-right: 150px;
+}
+        
+#left {
+  width: 200px; 
+  margin-left: -100%;
+}
+        
+#right {
+  width: 150px; 
+  margin-left: -150px;
+}
+        
+#footer {
+  clear: both;
+}
+</code></pre>
+<p>关于双飞翼布局的示例，可参考：<a href='https://litaooooo.github.io/page-examples/double-wings.html'>双飞翼布局</a></p>
+<h2>总结与思考</h2>
+<p>通过对圣杯布局和双飞翼布局的介绍可以看出，圣杯布局在DOM结构上显得更加直观和自然，且在日常开发过程中，更容易形成这样的DOM结构（通常<code>和</code>/<code>一起被嵌套在</code>中）；而双飞翼布局在实现上由于不需要使用定位，所以更加简洁，且允许的页面最小宽度通常比圣杯布局更小。</p>
+<p>其实通过思考不难发现，两者在代码实现上都额外引入了一个``标签，其目的都是为了既能保证中间栏产生浮动（浮动后还<strong>必须</strong>显式设置宽度），又能限制自身宽度为两侧栏留出空间。</p>
+<p>从这个角度出发，如果去掉额外添加的``标签，能否完成相同的布局呢？答案是肯定的，不过这需要在<strong>兼容性上做出牺牲</strong>：</p>
+<h3>DOM结构</h3>
+<p>&nbsp;</p>
+<pre><code class='language-xml' lang='xml'>&lt;div id=&quot;header&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;center&quot; class=&quot;column&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;left&quot; class=&quot;column&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;right&quot; class=&quot;column&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;footer&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>去掉额外的<code>`标签后，得到的DOM结构如上所示，基于双飞翼布局的实现思路，只需要在</code>center`上做出修改：</p>
+<h3>1. 使用calc()</h3>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>.column {
+  float: left;
+}
+    
+#center {
+  margin-left: 200px;
+  margin-right: 150px;
+  width: calc(100% - 350px);
+}
+</code></pre>
+<p>通过<code>calc()</code>可以十分方便地计算出<code>center</code>应该占据的自适应宽度，目前<code>calc()</code>支持到<strong>IE9</strong>。</p>
+<h3>2. 使用border-box</h3>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>.column {
+  float: left;
+}
+    
+#center {
+  padding-left: 200px;
+  padding-right: 150px;
+  box-sizing: border-box;
+  width: 100%;
+}
+</code></pre>
+<p>使用<code>border-box</code>可以将<code>center</code>的整个盒模型宽度设置为父元素的100%宽度，此时再利用<code>padding-left</code>和<code>padding-right</code>可以自动得到中间栏的自适应宽度。不过需要注意的是，由于padding是盒子的一部分，所以padding部分会具有中间栏的背景色，当中间栏高于侧栏时，会出现这样的情况：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/9397803-243751e1bb945634.png?imageMogr2/auto-orient/strip|imageView2/2/w/703/format/webp" referrerpolicy="no-referrer" alt="img"></p>
+<p>padding背景色影响左侧空间</p>
+<p>目前<code>box-sizing</code>支持到<strong>IE8</strong>。</p>
+<h3>3.  使用flex</h3>
+<p>这里使用flex还是需要与圣杯布局相同的DOM结构，不过在实现上将更加简单：</p>
+<p>&nbsp;</p>
+<pre><code class='language-xml' lang='xml'>&lt;!-- DOM结构 --&gt;
+&lt;div id=&quot;container&quot;&gt;
+  &lt;div id=&quot;center&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;left&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;right&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>CSS代码如下：</p>
+<p>&nbsp;</p>
+<pre><code class='language-css' lang='css'>#container {
+    display: flex;
+}
+
+#center {
+    flex: 1;
+}
+
+#left {
+    flex: 0 0 200px;
+    order: -1;
+}
+
+#right {
+    flex: 0 0 150px;
+}
+</code></pre>
+<p>## </p>
+</body>
+</html>
